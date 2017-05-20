@@ -14,7 +14,7 @@ To get Comment Police app to run locally, follow instructions below. By running 
 1. @Mac **_open terminal_**                                                                                                   
    @Windows **_open cmd_** 
 
-2. Navigate to a directory where you want to store the project locally. Creating a new directory is recommended. Once you are in the directory you have chosen, on the command line use the command - `git clone git@github.com:WPMedia/comment-police.git`.  
+2. Navigate to a directory where you want to store the project locally. Creating a new directory is recommended. Once you are in the directory you have chosen, on the command line use the command - `git@github.com:indianHacker/comments-police.git`.  
 
  This will clone the repo into your directory and you will have access to the project locally.
  
