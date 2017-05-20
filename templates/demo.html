@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Comments Demo</title>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script>
+function demoInit() {
+  var text = $('#comment').val();
+
+  $.getJSON("/api/v0/comment/demo_section/?comment=" + text)
+    .always(function(response) {
+      if (response['status']=='bad') {
+          console.log(response['failures'][0]['sample_message']);
+          $('#response_error').css("display", "block")
+          $('#response_error').html(response['failures'][0]['sample_message'])
+      } else {
+          $('#response_error').css("display", "none")
+          console.log('No errors returned')
+      }
+    });
+}
+</script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="md-col-6" style="border: 1px solid #d2d2d2; border-radius: 1em; padding: 1em 2.3em; margin-top: 3em;">
+
+            <div style="background-color: #FFCC00; padding: 10px; border-radius: 5px; display: none;"   id="response_error"></div>
+            <h1>Comments</h1>
+            <form method="get" action="" onsubmit="return false;">
+              <input style="width: 800px; height: 100px " type="text" id="comment" name="comment">
+              <input type="submit" onclick="demoInit()"/>
+            </form>
+
+            <hr>
+            <p>
+            Very nicely done!
+            </p>
+            <hr>
+            <p>
+            I would recommend this as it is very easy to learn.
+            </p>
+            <hr>
+            <p>
+            Agreed.
+            </p>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
