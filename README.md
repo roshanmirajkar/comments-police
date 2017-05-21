@@ -1,6 +1,6 @@
 # Comment Police
 
-`Last Modified: 08-29-2016`
+`Last Modified: 05-20-2017`
 
 This page contains information pertaining to the Comment Police project that was completed at a intern hackathon. The Comment Police project was originally developed by Amy Harris, Roshan Mirajkar, and Daniel Hoerauf of the 2016 intern team.
 
