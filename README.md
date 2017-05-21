@@ -14,21 +14,17 @@ To get Comment Police app to run locally, follow instructions below. By running 
 1. @Mac **_open terminal_**                                                                                                   
    @Windows **_open cmd_** 
 
-2. Navigate to a directory where you want to store the project locally. Creating a new directory is recommended. Once you are in the directory you have chosen, on the command line use the command - `git@github.com:indianHacker/comments-police.git`.  
-
- This will clone the repo into your directory and you will have access to the project locally.
+2. Navigate to a directory where you want to store the project locally. Creating a new directory is recommended. Once you are in the directory you have chosen, on the command line use the command - `git@github.com:roshanmirajkar/comments-police.git`. This will clone the repo into your directory and you will have access to the project locally.
  
-3. Navigate to `comment-police/local`
+3. Create a virtual env using command `virtualenv wapo-comment-police`  
 
-4. Create a virtual env using command `virtualenv wapo-comment-police`  
+4. Activate virtual env using command `source wapo-comment-police/bin/activate` 
 
-5. Activate virtual env using command `source wapo-comment-police/bin/activate` 
+5. Now we want to unsure we have the correct file compatibilities and versions, to do this we will be downloading the requirements. Navigate to `comments-police` and run the command `pip install -r requirements.txt`. This will install the requirements and dependencies needed to run the app. Ensure there are no errors, then proceed.  
 
-6. Now we want to unsure we have the correct file compatibilities and versions, to do this we will be downloading the requirements. Navigate to `comment-police/local` and run the command `pip install -r requirements.txt`. This will install the requirements and dependencies needed to run the app. Ensure there are no errors, then proceed.  
+6. Run command: `python app.py` to get app running locally. 
 
-7. Run command: `python app.py` to get app running locally. 
-
-8. Paste link <http://localhost:8080/demo/> in your browser. Enter the desired text inside the comment box and hit submit. You can use your own samples or the provided text samples in `sample.txt`. When an entered comment violates a rule, text will be displayed above the comment detailing feedback to the user depending on which rule was violated.
+7. Paste link <http://localhost:8080/demo/> in your browser. Enter the desired text inside the comment box and hit submit. You can use your own samples or the provided text samples in `sample.txt`. When an entered comment violates a rule, text will be displayed above the comment detailing feedback to the user depending on which rule was violated.
 
 ## Rules
 `Last Modified: 08-29-2016`
