@@ -33,7 +33,8 @@ To get Comment Police app to run locally, follow instructions below. By running 
 - Grey Words
 - Spam (Repitition)
 - Over Max Character Count 
-- Directed User to USer Agression 
+- Directed User to USer Agression
+- Malicious Links Checker
 
 **_Each rule has its own return message when broken. This message can be improved by the comment editors, as currently we made our own sample messages._**
 
